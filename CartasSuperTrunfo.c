@@ -28,13 +28,13 @@ int main() {
              float pib;
 
     printf("insira o país:\n");
-    scanf(" %s", &pais);
+    scanf(" %[^\n]", &pais);
 
           printf("Insira o Estado:\n");
-          scanf(" %s", &estado);
+          scanf(" %[^\n]", &estado);
 
                 printf("Insira a cidade:\n");
-                scanf(" %s", &cidade);
+                scanf(" %[^\n]", &cidade);
 
                       printf("Código da carta:\n");
                       scanf(" %s", &cod);
