@@ -25,14 +25,14 @@ int main() {
     // "float" para números de ponto flutuante que envolvam casas decimais;
 
       // importante não usar acentos e nem "ç" para variaveis;
-      char pais[25];
-      char estado[25];
-      char cidade[25];
-      char cod[4];
-      int populacao;
-      int turistico;
-      float area;
-      float pib;
+      char pais[25], pais2[25];
+      char estado[25], estado2[25];
+      char cidade[25], cidade2[25];
+      char cod[4], cod2[4];
+      int populacao, populacao2;
+      int turistico, turistico2;
+      float area, area2;
+      float pib, pib2;
 
             //Especificadores de formato;
             // (%d) para caracteres inteiros;
@@ -94,6 +94,64 @@ int main() {
       
       float super = populacao+area+pib+turistico+capita+(1/densidade);
       
-      printf("Super Poder: %.2f", super);
+      printf("Super Poder: %.2f \n", super);
+
+
+      printf("insira o país:\n");
+      scanf(" %[^\n]", &pais2);
+                  
+
+            printf("Insira o Estado:\n");
+            scanf(" %[^\n]", &estado2);
+                        
+                  printf("Insira a cidade:\n");
+                  scanf(" %[^\n]", &cidade2);
+
+                        printf("Código da carta:\n");
+                        scanf(" %s", &cod2);
+         
+                              printf("Insira a população:\n");
+                              scanf(" %d", &populacao2);
+
+                                    printf("Insira a Área da cidade em km²:\n");
+                                    scanf(" %f", &area2);
+
+                              printf("Insira o PIB da cidade:\n");
+                              scanf(" %f", &pib2);
+
+                        printf("Insira quantos pontos turísticos possui a cidade:\n");
+                        scanf(" %d", &turistico2);
+
+                  printf("País: %s \n", pais2);
+
+            printf("Estado: %s \n", estado2);
+
+      printf("Cidade: %s \n", cidade2);
+
+            printf("Código: %s \n", cod2);
+
+                  printf("População: %d \n", populacao2);
+
+                        printf("Área: %3.f km² \n", area2);
+
+                              printf("PIB: %3.f \n", pib2);
+
+                                    printf("Pontos Turísticos: %d \n", turistico2);
+                        
+                              float densidade2 = populacao2/area2;
+                              float capita2 = pib2/populacao2;
+                        
+                        printf("Densidade Populacional: %.2f \n", densidade2);
+
+                  printf("Pib per capita: %.2f \n", capita2);
+      
+            float super2 = populacao2+area2+pib2+turistico2+capita2+(1/densidade2);
+      
+      printf("Super Poder: %.2f \n", super2);
+
+
+      
+
+
       return 0;
 }
