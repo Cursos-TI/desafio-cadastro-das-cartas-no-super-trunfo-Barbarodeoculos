@@ -92,7 +92,7 @@ int main() {
 
             printf("Pib per capita: %.2f \n", capita);
       
-      float super = populacao+area+pib+turistico+capita+(1/densidade);
+      float super = populacao+area+pib+capita;
       
       printf("Super Poder: %.2f \n", super);
 
@@ -145,12 +145,23 @@ int main() {
 
                   printf("Pib per capita: %.2f \n", capita2);
       
-            float super2 = populacao2+area2+pib2+turistico2+capita2+(1/densidade2);
+            float super2 = populacao2+area2+pib2+capita2;
       
       printf("Super Poder: %.2f \n", super2);
 
+      printf("Resultado de carta 1 x Carta 2\n");
 
+      //Se a carta 1 for a vencedora o resultado será (1);
+      //Se a carta 2 for a vencedora o resultado será (0);
+      printf("População - Vencedor: %d\n", populacao > populacao2);
+      printf("Área - Vencedor: %d\n", area > area2 );
+      printf("Pib - Vencedor: %d\n", pib > pib2 );
+      printf("Ponto Turístico - Vencedor: %d\n", turistico > turistico2);
+      printf("Densidade Populacional - Vencedor: %d\n", densidade < densidade2);
+      printf("PIB per Capita - Vencedor: %d\n", capita > capita2);
+      printf("Super Poder - Vencedor: %d\n", super > super2);
       
+
 
 
       return 0;
