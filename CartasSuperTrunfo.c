@@ -62,7 +62,7 @@ int main() {
                         printf("Insira a Área da cidade em km²:\n");
                         scanf(" %f", &area);
 
-                  printf("Insira o PIB da cidade em milhões:\n");
+                  printf("Insira o PIB da cidade:\n");
                   scanf(" %f", &pib);
 
             printf("Insira quantos pontos turísticos possui a cidade:\n");
@@ -80,7 +80,7 @@ int main() {
 
                               printf("Área: %3.f km² \n", area);
 
-                                    printf("PIB: %3.f milhões \n", pib);
+                                    printf("PIB: %3.f \n", pib);
 
                               printf("Pontos Turísticos: %d \n", turistico);
                         
@@ -91,6 +91,9 @@ int main() {
                   printf("Densidade Populacional: %.2f \n", densidade);
 
             printf("Pib per capita: %.2f \n", capita);
-
+      
+      float super = populacao+area+pib+turistico+capita+(1/densidade);
+      
+      printf("Super Poder: %.2f", super);
       return 0;
 }
