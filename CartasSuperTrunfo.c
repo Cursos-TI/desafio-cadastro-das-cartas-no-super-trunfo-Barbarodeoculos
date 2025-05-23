@@ -25,7 +25,10 @@ int main() {
       int turistico, turistico2;
       float area, area2;
       float pib, pib2;
-      // carta 1
+      float densidade, densidade2;
+      float capita, capita2;
+
+            // carta 1
             printf("Código da carta 1:\n");
             scanf(" %s", &cod);
 
@@ -69,6 +72,13 @@ int main() {
                         printf("Insira quantidade de pontos turísticos da carta 2: \n");
                         scanf(" %d", &turistico2);
                         printf("\n");
+            
+            // conversão implícita
+            densidade = populacao / area;
+            densidade2 = populacao2 / area2;
+            // conversão explícita
+            capita = (float) pib / populacao;
+            capita2 = (float) pib2 / populacao2;
                         
       //carta 1
       printf("Carta 1 \n");
@@ -78,7 +88,10 @@ int main() {
       printf("População: %d \n", populacao);
       printf("Área: %.2f km² \n", area);
       printf("PIB: %.2f Bilhões de reais \n", pib);
-      printf("Número de pontos Turísticos: %d \n\n", turistico);
+      printf("Número de pontos Turísticos: %d \n", turistico);
+      printf("Densidade Populacional: %.2f Hab/Km² \n", densidade);
+      printf("PIB per Capita: %.2f Reais\n", capita);
+      puts("");
 
             //carta 2
             printf("Carta 2 \n");
@@ -88,7 +101,9 @@ int main() {
             printf("População: %d \n", populacao2);
             printf("Área: %.2f Km² \n", area2);
             printf("PIB: %.2f Bilhões de reais \n", pib2);
-            printf("Número de pontos Turísticos: %d \n\n", turistico2);
-                         
+            printf("Número de pontos Turísticos: %d \n", turistico2);
+            printf("Densidade Populacional: %.2f Hab/Km² \n", densidade2);
+            printf("PIB per Capita: %.2f Reais \n", capita2); 
+            puts("");            
       return 0;
 }
